@@ -10,9 +10,10 @@ Rails.application.routes.draw do
 
   root "pages#index"
 
-  get "/about", :to => "pages#about"
+  get "/about",   :to => "pages#about"
   get "/contact", :to => "pages#contact"
-  get "/terms", :to => "pages#terms"
+  get "/english", :to => "pages#english"
+  get "/terms",   :to => "pages#terms"
 
   namespace :admin do
     resources :users, :only => [:index, :destroy, :edit, :update]
